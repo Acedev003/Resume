@@ -1,0 +1,47 @@
+html,body
+{
+    color: #cdcdcd;
+    background-color: #090909;
+    font-family: monospace;
+    font-size: large;
+}
+
+a, a:visited, a:hover, a:active 
+{
+    color: #00bbbb;
+}
+
+input
+{
+    background-color: #090909;
+    outline: none;
+    border: none;
+}
+
+input:focus
+{
+    outline: none;
+}
+
+
+.term
+{
+    color: #cdcdcd;
+}
+
+.term::before
+{
+    color: #55ff55;
+    content: "$ ";
+}
+
+.collapsed-li p
+{
+    display: none;
+    color: #cdcdcd;
+}
+
+.collapsed-li > li
+{
+    color: #b052da;
+}

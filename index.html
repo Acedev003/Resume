@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <title>Acedev's Portfolio</title>
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+        <link href="/assets/css/index.css" rel="stylesheet">
+        <script src="/assets/js/jquery-3.6.1.min.js"></script>
+        <script src="/assets/js/typing-effect.js"></script>
+        <script>
+            $(document).ready(()=>{
+                
+                $("#useragent").text(navigator.userAgent);
+                $("#time").text(new Date().toTimeString());
+
+                let entr1 = false;
+                let keylisten = false;
+
+                $('.b').css('visibility','hidden');
+                $('.c').css('visibility','hidden');
+                $('.d').css('visibility','hidden');
+                $('.e').css('visibility','hidden');
+                $('.f').css('visibility','hidden');
+                $('.g').css('visibility','hidden');
+                $('.h').css('visibility','hidden');
+                $('.i').css('visibility','hidden');
+
+                typingEffect(Array.from($('.a')),{speed:10}).then(()=>{
+                    typingEffect(Array.from($(".b")),{speed:1}).then(()=>{
+                        $('.b').after("<div class='term'>Press enter to continue <input class='entr1'>");
+                        keylisten = true;
+                    });
+                });
+
+
+                $(document).on("keydown", '', ()=>{
+                    if(keylisten)
+                    {
+                        if(!entr1) 
+                        {
+                            entr1 = true;
+                            keylisten = false;
+                            $('.c').css('visibility', 'visible');
+                            typingEffect(Array.from($('.c')), { speed: 10 }).then(()=>{
+                                typingEffect(Array.from($('.d')), { speed: 10 }).then(()=>{
+                                    typingEffect(Array.from($('.e')), { speed: 10 }).then(()=>{
+                                        $('.f').css('visibility','visible');
+                                        typingEffect(Array.from($('.g')), { speed: 10 }).then(()=>{
+                                            typingEffect(Array.from($('.h')), { speed: 10 }).then(()=>{
+                                                typingEffect(Array.from($('.i')), { speed: 10 });
+                                            });
+                                        });
+                                    });
+                                })
+                            });
+
+                        }
+                    }
+                });
+
+                $('.collapsed-li li').click(()=>{
+                    $('.collapsed-li p').slideToggle();
+                });
+                
+
+            });
+        </script>
+    </head>
+    <body>
+        <div class="term a">Initializing Resume</div>
+        <div class="term a">Login at <span id ="time" style="color: #b052da;">unknown</span> via <span id="useragent" style="color: #d9bd26;">unknown</span></div>
+        <div class="term a">Printing Basic Info</div>
+        
+        <p class="b">
+            -- Ashvin V --<br><br>
+            Undergraduate AI enthusiast with experience in building and deploying multiple projects in various disciplines along with conducting technical workshops on latest computational trends. <br><br>
+        </p>
+        
+        <div class="c">
+            <div class="term"></div>
+            <div class="term">-------------------------------------</div>
+            <div class="term">Logging Education data</div>
+            <ul>
+                <li>
+                    (Aug 2020 - PRESENT) : B. Tech CSE-AI, Karunya Institute of Technology
+                </li>
+                <li>
+                    (JUN 2018 - MAR 2020): Higher Secondary, Sacred Heart Higher Secondary School
+                </li>
+            </ul>
+        </div>
+        
+        <div class="d">
+            <div class="term">-------------------------------------</div>
+            <div class="term">Logging Skills</div>
+            <ul>
+                <li>Basic knowledge in C++, Python, JavaScript, Java and C</li>
+                <li>Novice in Machine Learning/Deep Learning algorithms</li>
+            </ul>
+        </div>
+
+        <div class="e">
+            <div class="term">-------------------------------------</div>
+            <div class="term">Logging Experience</div>
+            <ul>
+                <li>
+                    (JAN 2022 - PRESENT) : K-Hacks Core Team Trainer
+                    <p>
+                        Trainer in K-Hacks with experience in conducting workshops on various relevant software topics like
+                        version control, AI fundamentals and Convolutional neural networks.
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="f">
+            <div class="term">-------------------------------------</div>
+            <div class="term">Listing Projects</div>
+            <ul class="collapsed-li">
+                <li>
+                    2019
+                    <p>
+                        - Flight3DTracker: A 3D live flight visualization for the web developed using Cesium JS, utilizing data from
+                        the OpenSky Network with interactive map layer
+                    </p>
+                </li>
+                <li>
+                    2020
+                    <p>
+                        - Flashlight with Shake: A lightweight android app built for increased accessibility to the device
+                        flashlight.<br>
+                        - Little Dino: A remake of the classic Chrome T-rex runner. Built with the SDL graphics library using the C
+                        programming language<br>
+                    </p>
+                </li>
+                <li>
+                    2021
+                    <p>
+                        - Mars Weather: A Martian weather app built for all space enthusiasts. Uses a web-based UI layer which
+                        allows for rapid deployment of updates<br>
+                        - K_Bot: Assistant chat bot for Karunya University students built using the RASA chat SDK along with an
+                        Android app interface.<br>
+                        - URL Shortener: Android app to shorten lengthy URL's using multiple free to use link shortening API's<br>
+                    </p>
+                </li>
+                <li>
+                    2022
+                    <p>
+                        - Create Ascii: Python module to create ascii effects from images.<br>
+                        - Digit Recognizer: Web app to recognize handwritten digits using model trained on MNIST and deployed using
+                        TFJS.
+                    </p>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="g">
+            <div class="term">-------------------------------------</div>
+            <div class="term">Loading Certifications</div>
+            <ul>
+                <li>
+                    <a href="https://coursera.org/share/da15db0d990123385d355ed12d5cc753">Neural Networks and Deep Learning (Coursera)</a>
+                </li>
+                <li>
+                    <a href="https://courses.nvidia.com/certificates/710e7aef67bd4a2fa9e831cb9dbdeb51">Fundamentals of Deep Learning (NVIDIA)</a>
+                </li>
+                <li>
+                    <a href="https://courses.nvidia.com/certificates/a1d05215114e487a8389fa3fa07fb797/">Getting started with AI on Jetson Nano (NVIDIA)</a>
+                </li>
+                <li>
+                    <a href="https://courses.nvidia.com/certificates/7316d25bccc440ab9d3a35a91570f58a/">Building Video AI Applications at the Edge on Jetson Nano (NVIDIA)</a>
+                </li>
+                <li>
+                    <a href="https://courses.edx.org/certificates/e5e00667aa1f444b9c3ab6aa23b7a4d6">Introduction to Linux (edX)</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="h">
+            <div class="term">-------------------------------------</div>
+            <div class="term">Listing Soft Skills</div>
+            <ul>
+                <li>Proficient in English</li>
+                <li>Ability to explain concepts in a simplified way</li>
+            </ul>
+        </div>
+
+        <div class="i">
+            <div class="term">-------------------------------------</div>
+            <div class="term">Logging misc links</div>
+            <ul>
+                <li><a href="mailto:acedeveloper003@gmail.com">Email</a></li>
+                <li><a href="tel:+910000000000">Mobile</a></li>
+                <li><a href="https://github.com/acedev003">Github</a></li>
+                <li><a href="https://twitter.com/acedev003">Twitter</a></li>
+                <li><a href="https://acedev003.github.io">Projects</a></li>
+                <li><a href="https://acedev003.github.io/Blog">Blog</a></li>
+            </ul>
+        </div>
+    </body>
+</html>
